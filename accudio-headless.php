@@ -5,14 +5,15 @@
  * @package     Accudio_Headless
  *
  * @wordpress-plugin
- * Plugin Name:       Accudio Headless
- * Plugin URI:        https://accudio.com
- * Description:       Tweaks for a headless WordPress install
- * Version:           1.0.0
- * Author:            Alistair Shepherd — Accudio
- * Author URI:        https://accudio.com/about
- * License:           GPL-3.0+
- * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
+ * Plugin Name:         Accudio Headless
+ * Plugin URI:          https://accudio.com
+ * Description:         Tweaks for a headless WordPress install
+ * Version:             1.0.0
+ * Author:              Alistair Shepherd — Accudio
+ * Author URI:          https://accudio.com/about
+ * License:             GPL-3.0+
+ * License URI:         http://www.gnu.org/licenses/gpl-3.0.txt
+ * GitHub Plugin URI:   Accudio/accudio-headless
  */
 
 // If this file is called directly, abort.
@@ -41,14 +42,18 @@ class Accudio_Headless {
 
   public static function add_menus()
   {
-    register_nav_menu('main-menu', __('Main Menu'));
+    register_nav_menu('primary-menu', __('Primary Menu'));
+    register_nav_menu('secondary-menu', __('Secondary Menu'));
+    register_nav_menu('tertiary-menu', __('Tertiary Menu'));
+    register_nav_menu('quandary-menu', __('Quandary Menu'));
+    register_nav_menu('quintessential-menu', __('Quintessential Menu'));
   }
 
   public static function acf_options()
   {
     if(function_exists('acf_add_options_page')) {
       acf_add_options_page(array(
-        'page_title'  => 'Custom Theme Options with ACF',
+        'page_title'  => 'Theme Options',
         'menu_title'  => 'Theme Options',
         'menu-slug'   => 'accudio-headless-options'
       ));
