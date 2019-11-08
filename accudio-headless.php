@@ -1,14 +1,14 @@
 <?php
 /**
  * @link        https://accudio.com
- * @since       1.0.0
+ * @since       1.0.1
  * @package     Accudio_Headless
  *
  * @wordpress-plugin
  * Plugin Name:         Accudio Headless
  * Plugin URI:          https://accudio.com
  * Description:         Tweaks for a headless WordPress install
- * Version:             1.0.0
+ * Version:             1.0.1
  * Author:              Alistair Shepherd — Accudio
  * Author URI:          https://accudio.com/about
  * License:             GPL-3.0+
