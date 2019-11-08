@@ -31,7 +31,6 @@ class Accudio_Headless {
   {
     // actions
     add_action('init', ['Accudio_Headless', 'add_menus']);
-    add_action('init', ['Accudio_Headless', 'acf_options']);
 
     // filters
     add_filter('acf/format_value', ['Accudio_Headless', 'acf_null'], 100, 1);
@@ -47,17 +46,6 @@ class Accudio_Headless {
     register_nav_menu('tertiary-menu', __('Tertiary Menu'));
     register_nav_menu('quandary-menu', __('Quandary Menu'));
     register_nav_menu('quintessential-menu', __('Quintessential Menu'));
-  }
-
-  public static function acf_options()
-  {
-    if(function_exists('acf_add_options_page')) {
-      acf_add_options_page(array(
-        'page_title'  => 'Theme Options',
-        'menu_title'  => 'Theme Options',
-        'menu-slug'   => 'accudio-headless-options'
-      ));
-    }
   }
 
   /**
